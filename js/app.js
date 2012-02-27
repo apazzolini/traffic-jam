@@ -71,7 +71,7 @@ var TRAFFIC = function($) {
 
   function solve() {
 
-    var personsPerSide = 4;
+    var personsPerSide = 5;
     var spaces = personsPerSide * 2 + 1;
 
     var movesPerPass = 1;
