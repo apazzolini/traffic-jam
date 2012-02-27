@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Traffic Jam</title>
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/jquery-1.4.2.min.js" type="text/javascript"></script>
+    <script src="js/app.js" type="text/javascript"></script>
+
+    <style type="text/css">
+      div.space {
+        cursor: pointer;
+      }
+    </style>
+
+  </head>
+  <body>
+
+    <div class="container">
+      <div id="spacesContainer" class="row">
+        <div class="span1 well space" id="space1">
+          <div class="right" id="r4">
+            &gt;
+          </div>
+        </div>
+        <div class="span1 well space" id="space2">
+          <div class="right" id="r3">
+           &gt;
+         </div>
+        </div>
+        <div class="span1 well space" id="space3">
+          <div class="right" id="r2">
+            &gt;
+          </div>
+        </div>
+        <div class="span1 well space" id="space4">
+          <div class="right" id="r1">
+            &gt;
+          </div>
+        </div>
+        <div class="span1 well space" id="space5">
+
+        </div>
+        <div class="span1 well space" id="space6">
+          <div class="left" id="l1">
+            &lt;
+          </div>
+        </div>
+        <div class="span1 well space" id="space7">
+          <div class="left" id="l2">
+            &lt;
+          </div>
+        </div>
+        <div class="span1 well space" id="space8">
+          <div class="left" id="l3">
+            &lt;
+          </div>
+        </div>
+        <div class="span1 well space" id="space9">
+          <div class="left" id="l4">
+            &lt;
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <a class="btn" href="#" onclick="TRAFFIC.solve()">Solve!</a>
+      </div>
+
+      <div class="row" id="moves">
+        &nbsp;
+      </div>
+
+
+    </div>
+
+  </body>
+</html>
+
