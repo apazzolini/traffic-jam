@@ -30,7 +30,7 @@ var TRAFFIC = function($) {
 			if (i < initialEmptySpace) { 
 				generatePlayer(space, playersPerSide - i + 1, 'r');
 			} else if (i > initialEmptySpace) {
-				generatePlayer(space, i - playersPerSide, 'l');
+				generatePlayer(space, i - playersPerSide - 1, 'l');
 			}
 
 			space.click(function() {
