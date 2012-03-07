@@ -153,7 +153,7 @@ var TRAFFIC = function($) {
 				}
 
 				if ((currentDirection < 0 && isFacingRight(personId)) ||
-						(currentDirection > 0 && !isFacingRight(personId))) {
+					(currentDirection > 0 && !isFacingRight(personId))) {
 					var success = move(personId);
 					if (success) {
 						successfulMoves++;
