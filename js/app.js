@@ -6,8 +6,12 @@ var TRAFFIC = function($) {
 	function init(numPlayers) {
 		this.numPlayers = numPlayers;
 
-		$('#controlsContainer').children().removeClass('btn-info');
-		$('#btn' + numPlayers).addClass('btn-info');
+		if ($('#btn' + numPlayers).hasClass('disabled')) {
+			return;
+		}
+
+		$('#controlsContainer').children('div.btn-group').children('a.btn').removeClass('btn-inverse').removeClass('disabled');
+		$('#btn' + numPlayers).addClass('btn-inverse').addClass('disabled');
 
 		$('#spacesContainer').html("");
 		$('#movesContainer').html("");
@@ -105,14 +109,21 @@ var TRAFFIC = function($) {
 
 	// Public
 
+	function reset() {
+		$('#spacesContainer').html("");
+		$('#movesContainer').html("");
+		generateSpaces(this.numPlayers + 1);
+	}
+
 	function move(personId) {
-		$('#movesContainer').append(personId.toUpperCase()).append("&nbsp; &nbsp;");
 
 		if (canMoveForward(personId)) {
 			moveForward(personId);
+			$('#movesContainer').append(personId.toUpperCase()).append("&nbsp; &nbsp;");
 			return true;
 		} else if (canJumpPerson(personId)) {
 			jumpPerson(personId);
+			$('#movesContainer').append(personId.toUpperCase()).append("&nbsp; &nbsp;");
 			return true;
 		}
 
@@ -120,7 +131,7 @@ var TRAFFIC = function($) {
 	}
 
 	function solve() {
-		init(this.numPlayers);
+		this.reset();
 
 		var personsPerSide = this.numPlayers / 2;
 		var spaces = personsPerSide * 2 + 1;
@@ -166,6 +177,7 @@ var TRAFFIC = function($) {
 
 	return {
 		init: init,
+		reset: reset,
 		move: move,
 		solve: solve
 	}

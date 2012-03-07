@@ -36,6 +36,10 @@
             div.hero-unit h1 {
                 margin-bottom: 15px !important;
             }
+
+			div.btn-group {
+				display: inline-block;
+			}
         </style>
     </head>
 
@@ -51,11 +55,16 @@
             </div>
 
             <div id="controlsContainer" class="centeredRow">
-                <a class="btn" id="btn4" href="#" onclick="TRAFFIC.init(4)">4 Players</a>
-                <a class="btn" id="btn6" href="#" onclick="TRAFFIC.init(6)">6 Players</a>
-                <a class="btn" id="btn8" href="#" onclick="TRAFFIC.init(8)">8 Players</a>
-                <a class="btn" id="btn10" href="#" onclick="TRAFFIC.init(10)">10 Players</a>
-                <a class="btn" id="btnSolve" href="#" onclick="TRAFFIC.solve()">Solve!</a>
+				<div class="btn-group">
+					<a class="btn" id="btn4" href="#" onclick="TRAFFIC.init(4)">4 Players</a>
+					<a class="btn" id="btn6" href="#" onclick="TRAFFIC.init(6)">6 Players</a>
+					<a class="btn" id="btn8" href="#" onclick="TRAFFIC.init(8)">8 Players</a>
+					<a class="btn" id="btn10" href="#" onclick="TRAFFIC.init(10)">10 Players</a>
+				</div>
+				<div class="btn-group">
+					<a class="btn" id="btnSolve" href="#" onclick="TRAFFIC.reset()">Reset</a>
+					<a class="btn" id="btnSolve" href="#" onclick="TRAFFIC.solve()">Solve!</a>
+				</div>
             </div>
 
             <div id="spacesContainer" class="centeredRow">
